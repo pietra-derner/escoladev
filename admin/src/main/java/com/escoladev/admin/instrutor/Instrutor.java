@@ -24,4 +24,22 @@ public class Instrutor {
 
     @Embedded
     private Endereco endereco;
+
+    public Instrutor(DTOCadastrarInstrutor instrutor){
+        this.nome = instrutor.nome();
+        this.email = instrutor.email();
+        this.materia = instrutor.materia();
+    }
+
+    public void atualizaInformacoes(DTOAlteracaoInstrutor instrutor){
+        if (instrutor.nome() != null){
+            this.nome = instrutor.nome();
+        }
+        if (instrutor.email() != null){
+            this.email = instrutor.email();
+        }
+        if (instrutor.endereco() != null){
+            this.endereco.atualizaInformacoes(instrutor.endereco());
+        }
+    }
 }
