@@ -1,6 +1,10 @@
 package com.escoladev.admin.controller;
 
-import com.escoladev.admin.instrutor.*;
+import com.escoladev.admin.dto.DTOAlteracaoInstrutor;
+import com.escoladev.admin.dto.DTOCadastrarInstrutor;
+import com.escoladev.admin.dto.DTOListarInstrutor;
+import com.escoladev.admin.model.Instrutor;
+import com.escoladev.admin.repository.InstrutorRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

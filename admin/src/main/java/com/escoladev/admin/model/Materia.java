@@ -1,4 +1,4 @@
-package com.escoladev.admin.instrutor;
+package com.escoladev.admin.model;
 
 public enum Materia {
     FRONTEND,

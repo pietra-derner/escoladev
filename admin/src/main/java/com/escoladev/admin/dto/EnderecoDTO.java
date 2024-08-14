@@ -1,4 +1,4 @@
-package com.escoladev.admin.endereco;
+package com.escoladev.admin.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

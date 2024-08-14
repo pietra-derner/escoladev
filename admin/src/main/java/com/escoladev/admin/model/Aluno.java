@@ -1,7 +1,6 @@
-package com.escoladev.admin.aluno;
+package com.escoladev.admin.model;
 
-import com.escoladev.admin.endereco.Endereco;
-import com.escoladev.admin.instrutor.Materia;
+import com.escoladev.admin.dto.DTOCadastrarAluno;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -27,4 +26,12 @@ public class Aluno {
 
     @Embedded
     private Endereco endereco;
+
+    public Aluno(DTOCadastrarAluno aluno) {
+        this.nome = aluno.nome();
+        this.dataNascimento = aluno.dataNascimento();
+        this.email = aluno.email();
+        this.materia = aluno.materia();
+        this.endereco = new Endereco(aluno.enderecoDTO());
+    }
 }

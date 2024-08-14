@@ -1,14 +1,15 @@
-package com.escoladev.admin.instrutor;
+package com.escoladev.admin.dto;
 
-import com.escoladev.admin.endereco.EnderecoDTO;
+import com.escoladev.admin.model.Materia;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
-public record DTOAlteracaoInstrutor(
+public record DTOAlteracaoAluno(
         @NotNull
         Long id,
         String nome,
         String email,
+        Materia materia,
         @Valid
         EnderecoDTO endereco) {
 

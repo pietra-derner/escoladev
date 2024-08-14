@@ -1,6 +1,7 @@
-package com.escoladev.admin.instrutor;
+package com.escoladev.admin.model;
 
-import com.escoladev.admin.endereco.Endereco;
+import com.escoladev.admin.dto.DTOAlteracaoInstrutor;
+import com.escoladev.admin.dto.DTOCadastrarInstrutor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -29,6 +30,7 @@ public class Instrutor {
         this.nome = instrutor.nome();
         this.email = instrutor.email();
         this.materia = instrutor.materia();
+        this.endereco = new Endereco(instrutor.enderecoDTO());
     }
 
     public void atualizaInformacoes(DTOAlteracaoInstrutor instrutor){

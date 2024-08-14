@@ -1,5 +1,6 @@
-package com.escoladev.admin.endereco;
+package com.escoladev.admin.model;
 
+import com.escoladev.admin.dto.EnderecoDTO;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
