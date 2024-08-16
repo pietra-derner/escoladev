@@ -1,7 +1,7 @@
 package com.escoladev.admin.controller;
 
 import com.escoladev.admin.dto.DTOAlteracaoInstrutor;
-import com.escoladev.admin.dto.DTOCadastrarInstrutor;
+import com.escoladev.admin.dto.DTOCadastroInstrutor;
 import com.escoladev.admin.dto.DTOListarInstrutor;
 import com.escoladev.admin.model.Instrutor;
 import com.escoladev.admin.repository.InstrutorRepository;
@@ -21,7 +21,7 @@ public class InstrutorController {
 
     @PostMapping
     @Transactional
-    public void cadastra(@RequestBody @Valid DTOCadastrarInstrutor dados){
+    public void cadastra(@RequestBody @Valid DTOCadastroInstrutor dados){
         repository.save(new Instrutor(dados));
     }
 
@@ -34,6 +34,7 @@ public class InstrutorController {
     @Transactional
     public void atualizar(@RequestBody @Valid DTOAlteracaoInstrutor dados){
         var instrutor = repository.getReferenceById(dados.id());
+        instrutor.atualizaInformacoes(dados);
     }
 
     @DeleteMapping("/{id}")

@@ -19,14 +19,14 @@ public class Endereco {
     private String cidade;
     private String uf;
 
-    public Endereco(EnderecoDTO endereco){
-        this.logradouro = endereco.logradouro();
-        this.bairro = endereco.logradouro();
-        this.cep = endereco.cep();
-        this.numero = endereco.cep();
-        this.complemento = endereco.cep();
-        this.cidade = endereco.cidade();
-        this.uf = endereco.uf();
+    public Endereco(EnderecoDTO enderecoDTO){
+        this.logradouro = enderecoDTO.logradouro();
+        this.bairro = enderecoDTO.logradouro();
+        this.cep = enderecoDTO.cep();
+        this.numero = enderecoDTO.cep();
+        this.complemento = enderecoDTO.cep();
+        this.cidade = enderecoDTO.cidade();
+        this.uf = enderecoDTO.uf();
     }
 
     public void atualizaInformacoes(EnderecoDTO endereco){

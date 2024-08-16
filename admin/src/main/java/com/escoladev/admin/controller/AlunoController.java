@@ -1,7 +1,7 @@
 package com.escoladev.admin.controller;
 
 import com.escoladev.admin.dto.DTOAlteracaoAluno;
-import com.escoladev.admin.dto.DTOCadastrarAluno;
+import com.escoladev.admin.dto.DTOCadastroAluno;
 import com.escoladev.admin.dto.DTOListarAluno;
 import com.escoladev.admin.model.Aluno;
 import com.escoladev.admin.repository.AlunoRepository;
@@ -21,7 +21,7 @@ public class AlunoController {
 
     @PostMapping
     @Transactional
-    public void cadastra(@RequestBody @Valid DTOCadastrarAluno dados){
+    public void cadastra(@RequestBody @Valid DTOCadastroAluno dados){
         repository.save(new Aluno(dados));
     }
 
@@ -34,6 +34,7 @@ public class AlunoController {
     @Transactional
     public void atualizar(@RequestBody @Valid DTOAlteracaoAluno dados){
         var aluno = repository.getReferenceById(dados.id());
+        aluno.atualizaInformacoes(dados);
     }
 
     @DeleteMapping("/{id}")
