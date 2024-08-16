@@ -1,8 +1,13 @@
 # ESCOLA DEV 🧑🏼‍🎓
 
-Projeto de uma aplicação para cadastrar, listar, alterar e deletar **(CRUD)** instrutores e alunos de um banco de dados. Esse projeto foi criado a partir do desafio do Curso "Spring Boot 3: desenvolva uma API Rest em Java", da [Alura](https://www.alura.com.br/). Nesse projeto, é possível cadastrar alunos que estudem Frontend, Backend, FullStack, QA, Mobile e iOS, e os instrutores dessas mesmas especialidades. Todo cadastro é salvo no **banco de dados MySQL** a partir das informações dadas pelo usuário. Aqui, utilizamos o [Insomnia](https://insomnia.rest/download) para informar os dados dos alunos e instrutores para o BD. 
 
-## **Como rodar o projeto: ✅**
+#### 💾 **Sobre o projeto:**
+
+Projeto de uma aplicação para cadastrar, listar, alterar e deletar **(CRUD)** instrutores e alunos de um banco de dados. Esse projeto foi criado a partir do desafio do Curso "Spring Boot 3: desenvolva uma API Rest em Java", da [Alura](https://www.alura.com.br/). 
+
+Nesse projeto, é possível cadastrar alunos que estudem Frontend, Backend, FullStack, QA, Mobile e iOS, e os instrutores dessas mesmas especialidades. Todo cadastro é salvo no **banco de dados MySQL** a partir das informações dadas pelo usuário. Aqui, utilizamos o [Insomnia](https://insomnia.rest/download) para informar os dados dos alunos e instrutores para o BD. 
+
+## ⚙️ **Como rodar o projeto:**
 Necessário alterar o arquivo "application.properties" com os seus dados do banco de dados:
 ```
 spring.datasource.url=jdbc:mysql://${DB_HOST}/escoladev_api
@@ -68,7 +73,7 @@ Para testar a alteração de dados de *alunos*, pode usar o seguinte JSON:
 ```
 
 
-## **Para criar o projeto, fiz o seguinte passo a passo:**
+## 📄 **Para criar o projeto, fiz o seguinte passo a passo:**
 📌 criar as classes de Instrutor, Alunos e Endereço, com todos os atributos que desejo que tenham, utilizando as anotações de banco de dados para nomear a tabela, gerar id, etc;
 
 📌 criar o Enum para apenas declarar as matérias;
@@ -109,7 +114,7 @@ CREATE TABLE nome_do_banco_de_dados;
 EXIT;
 ```
 
-## **Tecnologias utilizadas:** 
+## 🛠 **Tecnologias utilizadas:** 
 * [Java](https://www.java.com/pt-BR/)
 * [Spring Boot 3](https://spring.io/projects/spring-boot) e suas dependências Flyway, Hibernate, Migration e Lombok.
 * [MySQL](https://www.mysql.com/)
